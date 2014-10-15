@@ -11,7 +11,7 @@ var_dump($_POST);
 	<title>My First HTML Form</title>
 </head>
 <body>
-	<form method="POST" action="testTheForm.php">
+	<form method="POST" action="/my_first_form.php">
     <p>
         <label for="username">Name</label>
         <input id="username" name="username" placeholder="placeholder" type="text">
@@ -42,6 +42,7 @@ var_dump($_POST);
 		<label> 
 		<input id="saveacopy" name="saveCopy" type="radio" value="Yes"> Yes
 		</label>
+
 		<label> 
 		<input id="saveacopy" name="saveCopy" type="radio" value="No"> No
 		</label>
@@ -51,8 +52,31 @@ var_dump($_POST);
 	</p>
 	
 </form>
-<form method="POST" >
-	
+
+<h2>Multiple Choice Test</h2>
+<form method="POST" action="">
+	<p>What do you value most?</p>
+	<label>
+		<input id="q1" name="q1" type="radio" value="money">Money
+	</label>
+	<label>
+		<input id="q1" name="q1" type="radio" value="health">Health
+	</label>
+	<label>
+		<input id="q1" name="q1" type="radio" value="family">Family
+	</label>
+	<label>
+		<input id="q1" name="q1" type="radio" value="love">Love
+	</label>
+
+	<p>How are you?</p>
+	<label>
+		<input id="q2" name="q2" type="radio">Fine
+	</label>
+	<label>
+		<input id="q2" name="q2" type="radio">Could be Better
+	</label>
+	<input type="submit" name="send">
 </form>
 </body>
 </html>
