@@ -4,7 +4,7 @@ var_dump($_GET);
 var_dump($_POST);
 
 ?>
-
+<!-- 
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,3 +80,4 @@ var_dump($_POST);
 </form>
 </body>
 </html>
+ -->
