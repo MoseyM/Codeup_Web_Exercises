@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title> User Interaction </title>
+		<script type="text/javascript">
+
+		function checkForAnswer(aswr) {
+			while(aswr === "") {
+				alert("You did not provide an answer.");
+				aswr = prompt("What is your name?");
+				}
+			return aswr;
+		}
+
+		var answer = prompt("Hello! What is your name?");
+		var answer = checkForAnswer(answer);
+
+		
+		alert("Welcome " + answer + "!!!");
+
+		var ans = confirm("Do you like pizza?");
+		if (ans == true) {
+			alert("Me Too!");
+		}
+		else {
+			alert("That sucks...");
+		}
+
+		</script>
+		</head>
+
+	<body>
