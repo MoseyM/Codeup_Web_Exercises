@@ -29,32 +29,33 @@
     //  TODO: Create a variable to represent your setInterval timer, 
     // which will have a one second interval.
 
-        function setTimer() {
+    function setTimer() {
 
-        // TODO: Decrement the timer by one each interval.
-        this.detonationTimer--;
-        // TODO: Update the timer div with the new value
-        var newTimer = document.getElementById('timer');
-        // console.log(newTimer);
-        newTimer.innerHTML=this.detonationTimer;
+    // TODO: Decrement the timer by one each interval.
+    this.detonationTimer--;
+    // TODO: Update the timer div with the new value
+    var newTimer = document.getElementById('timer');
+    // console.log(newTimer);
+    newTimer.innerHTML=this.detonationTimer;
 
-        // document.getElementById('timer').innerHTML = test;
+    // document.getElementById('timer').innerHTML = test;
 
-        // TODO: Console log the current interval.
+    // TODO: Console log the current interval.
 
-        // TODO: Explode the BOM with an alert if the timer runs out.
-        if(newTimer.innerHTML== 0){
-            alert("The bomb has Exploded");
-            clearInterval(intervalId);
-            replay();
-        }
-        // TODO: Clear the interval afterwards.
+    // TODO: Explode the BOM with an alert if the timer runs out.
+    if(newTimer.innerHTML== 0){
+        alert("The bomb has Exploded");
+        clearInterval(intervalId);
+        replay();
+    }
+    // TODO: Clear the interval afterwards.
     };
 
     function replay() {
         var replay = confirm('Would you like to play again?');
         if (replay) {
             this.detonationTimer=10;
+            this.count=0;
             intervalId = setInterval(setTimer,1000);
         }
         else{
@@ -70,10 +71,10 @@
     // TODO: Attach an event listener to that variable, which runs when clicked.
     function clickFunction() {
         // TODO: Generate the random value for the margin-top css property
-        var randMarginTop = (Math.floor(Math.random()*100));
+        var randMarginTop = (Math.floor(Math.random()*250));
         // TODO: Generate the random value for the margin-left css 
         
-        var randMarginLeft = (Math.floor(Math.random()*100));
+        var randMarginLeft = (Math.floor(Math.random()*175));
         // TODO: If the count is equal or greater than maxCount
         if (count >= maxCount) {
             // TODO: Clear the interval.
