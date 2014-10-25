@@ -23,11 +23,13 @@
     var maxCount = 10;
     var detonationTimer = 10; // seconds
     var btnDefuse = document.getElementById('btnDefuse');
+    var intervalId = setInterval(setTimer,1000);
 
 
     //  TODO: Create a variable to represent your setInterval timer, 
     // which will have a one second interval.
-    var intervalId = setInterval(function () {
+
+        function setTimer() {
 
         // TODO: Decrement the timer by one each interval.
         this.detonationTimer--;
@@ -41,21 +43,26 @@
         // TODO: Console log the current interval.
 
         // TODO: Explode the BOM with an alert if the timer runs out.
-        if(newTimer.innerHTML==0){
+        if(newTimer.innerHTML== 0){
             alert("The bomb has Exploded");
             clearInterval(intervalId);
-            btnDefuse.removeEventListener('click', clickFunction);
-            // replay();
+            replay();
         }
         // TODO: Clear the interval afterwards.
-    }, 1000);
+    };
 
-    // function replay() {
-    //     var replay = confirm('Would you like to play again?');
-    //     if (replay) {
-    //     this.detonationTimer=10;
-    //     this.intervalId.setInterval;
-    //      };
+    function replay() {
+        var replay = confirm('Would you like to play again?');
+        if (replay) {
+            this.detonationTimer=10;
+            intervalId = setInterval(setTimer,1000);
+        }
+        else{
+            alert("Game Over!!");
+            btnDefuse.removeEventListener('click', clickFunction);
+         };
+        }
+     
     // }
 
 
