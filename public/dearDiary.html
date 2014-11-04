@@ -1,0 +1,46 @@
+<!-- add a way to submit and it pops into modal and flys away. and then gives message to user that message has been saved. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> JQuery Exercise </title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/diary.css">
+	</head>
+	<body class="bodySize">
+	<div class="container" id="mainBody"> 
+		<div id="header">
+			<h1> Dear Diary </h1>
+		</div>
+		<div class="details">
+			<p> Share with yourself your deepest concerns, hopes and aspiration. If no one else, be honest with yourself. Make sure to change the background to fit your mood. Embrace and love. Share and Care (about yourself first).</p>
+		</div>
+		<div class="form" id="formArea">
+			<form action="dearDiary.php" method="POST">
+				<div class="form-group">
+					<input type="text" placeholder="Type your alias here" name="alias">
+				</div>
+				<div class="form-group">
+					<textarea rows="15" placeholder="Share With Yourself Here" name="feelings">
+					</textarea>
+				</div>
+				</form>
+				<div class="form-group" id="endOfForm">
+					<button type="submit" class="btn btn-success" name="save">Save Entry</button>
+					<button type="submit" class="btn btn-primary" name="comment">Submit as Comment</button>
+			</div>
+		</div>
+		<div id="comment fillIn">
+			<h3> Comments </h3>
+			<div>
+				
+
+			</div>
+		</div>
+	</div>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/diary.js"></script>
+	</body>
+</html>
