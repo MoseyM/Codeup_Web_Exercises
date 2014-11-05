@@ -5,7 +5,7 @@
 		.invisible {
 			display:none;
 		}
-		body {
+		#body {
 			background-color: orange;
 		}
 	</style>
@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
 
 	</head>
-	<body>
+	<body id="body">
 	<div>
 		<h3> Lies of the U.S.</h3>
 			<ul>
@@ -69,7 +69,7 @@
 	$(document).ready(function() {
 			$('dd').on('click', function () {
 				// console.log($(this));
-				$(this).addClass('invisible');
+				$(this).toggle();
 			});
 
 
@@ -78,7 +78,7 @@
 		});
 
 		$('li').click(function(){
-			$(this).parent('ul').addClass('invisible');
+			$(this).parent('ul').toggle();
 		});
 	});
 
