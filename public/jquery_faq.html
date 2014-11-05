@@ -1,0 +1,87 @@
+<html>
+	<head>
+	<title> JQuery FAQs </title>
+	<style type="text/css">
+		.invisible {
+			display:none;
+		}
+		body {
+			background-color: orange;
+		}
+	</style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+	</head>
+	<body>
+	<div>
+		<h3> Lies of the U.S.</h3>
+			<ul>
+				<li> Landing on Moon</li>
+				<li> Equality</li>
+				<li> The "American Dream"</li>
+			</ul>
+	</div>
+	<div>
+		<h3>Society's Hypocrisy</h3>
+			<ul>
+				<li>Religious freedom but don't apply in politics</li>
+				<li>Wealth and the utilization of the poor</li>
+				<li>Complacency under the poverty line</li>
+			</ul>
+	</div>
+	<div>
+		<h3>Change and Inaction</h3>
+			<ul>
+				<li>Voting produces no change but rather the <em> Idea </em> of change and power</li>
+				<li>Truth is not for everyone</li>
+				<li>Hate is easily caught and contagious</li>
+			</ul>
+	</div>
+	<dl>
+		<dt>Circle</dt>
+		<dd>Circles have no beginning or end. They represent the eternal whole and in every culture are an archetypical form representing the sun, the earth, the moon, the universe, and other celestial objects between. </dd>
+	</dl>
+	<dl>
+		<dt>Square</dt>
+		<dd>Squares are stable and equal on all sides. They're familiar and trusted which suggests honesty. Squares and rectangles suggest conformity, peacefulness, solidity, security, and equality. </dd>
+	</dl>
+	<dl>
+		<dt>Rectangle</dt>
+		<dd>Rectangles are the most common geometric shape encountered. The majority of text we read is set in rectangles or squares. Squares and rectangles suggest conformity, peacefulness, solidity, security, and equality. </dd>
+	</dl>
+	<dl>
+		<dt>Triangle</dt>
+		<dd>Triangles can be stable when sitting on their base or unstable when not. They represent dynamic tension, action, and aggression. Triangles have energy and power and their stable/unstable dynamic can suggest either conflict or steady strength. </dd>
+	</dl>
+	<dl>
+		<dt>Curved shapes</dt>
+		<dd>Curved shapes offer rhythm and movement, happiness, pleasure and generosity. They are seen as more feminine than sharp shapes</dd>
+	</dl>
+	<dl>
+		<dt>Sharp Shapes</dt>
+		<dd> Sharp shapes are lively and youthful and are seen as more masculine.</dd>
+	</dl>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+			$('dd').on('click', function () {
+				// console.log($(this));
+				$(this).addClass('invisible');
+			});
+
+
+		$('ul').each(function(index) {
+			$(this).children('li:first').css('font-weight', 'bold');
+		});
+
+		$('li').click(function(){
+			$(this).parent('ul').addClass('invisible');
+		});
+	});
+
+	</script>
+	</body>
+</html>
